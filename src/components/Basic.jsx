@@ -29,13 +29,7 @@ const AppLogo = styled.img`
   height: 40vmin;
   pointer-events: none;
 
-  animation: ${rotation};
-
-  @media (prefers-reduced-motion: no-preference) {
-    & {
-      animation: App-logo-spin infinite 20s linear;
-    }
-  }
+  animation: ${rotation} infinite 20s linear;
 `;
 
 const MyA = styled.a`
