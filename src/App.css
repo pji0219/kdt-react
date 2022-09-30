@@ -1,8 +1,17 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
-.App-logo {
+.App h1 {
+  background-color: skyblue;
+}
+
+.App span {
+  background-color: orange;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +44,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
