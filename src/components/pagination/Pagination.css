@@ -1,0 +1,12 @@
+.pagination {
+  display: flex;
+  list-style: none;
+}
+
+.page {
+  margin-right: 3px;
+}
+
+.page.active {
+  background-color: blueviolet;
+}

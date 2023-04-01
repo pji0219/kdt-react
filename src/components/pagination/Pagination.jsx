@@ -1,19 +1,16 @@
-import React from "react";
+import "./Pagination.css";
 
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
-  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
-
+const Pagination = ({ currentPage, pageNumbers, handlePageChange }) => {
   return (
     <ul className="pagination">
       {pageNumbers.map(number => (
         <li key={number} className="page-item">
-          <a
-            href="#"
-            className={`page-link ${number === currentPage ? "active" : ""}`}
-            onClick={() => onPageChange(number)}
+          <button
+            className={`page ${String(number) === currentPage ? "active" : ""}`}
+            onClick={() => handlePageChange(String(number))}
           >
             {number}
-          </a>
+          </button>
         </li>
       ))}
     </ul>
