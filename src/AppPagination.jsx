@@ -8,7 +8,7 @@ function AppPagination() {
   const [data, setData] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const currentPage = searchParams.get("page") || "1";
-  const totalPages = 5;
+  const totalPages = data.length / 2;
   const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   useEffect(() => {
@@ -25,7 +25,6 @@ function AppPagination() {
     <>
       <List data={dataPerPage} />
       <Pagination
-        searchParams={searchParams}
         currentPage={currentPage}
         pageNumbers={pageNumbers}
         handlePageChange={handlePageChange}
